@@ -41,13 +41,17 @@ print(decrypt(cipher, public[1], private))
 
 *First test where anything hasn't been modified
 Signature is authentic
+
 Second test where public key has been modified
 Signature or public key are compromised
+
 Third test where signature has been modified
 Signature or public key are compromised*
 
 *encryption*:
 
 *First test, where encryption and decryption are made as supposed to be. Status of original message being equal to decrypted one:  True
+
 Second test, where ciphertext is modified. Status of original message being equal to decrypted one:  False
+
 Third test with the wrong private key. Status of original message being equal to decrypted one:  False*
