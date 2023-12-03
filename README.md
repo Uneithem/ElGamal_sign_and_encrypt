@@ -7,31 +7,47 @@ This program uses sympy library for operations with large prime numbers. For doc
 Firstly: generate p - prime and list of g - primitive roots modulo p using:
 
 p = int(GeneratePrime(*desired keylength*), 2)
+
 prim_roots = rootsGenerate(p)
+
 
 Secondly: generate private and public keys using following code:
 
 g = random.choice(prim_roots)
+
 private, b = keyGen(p, g)
+
 public = (b, p, g)
+
 
 Now, if you need to sign a message run:
 
+
 message = *Your message*
+
 signature = sign(message, private, public[1], public[2])
+
 *Output type is a tuple consisting of two integers*
+
 
 To verify signature:
 
+
 verify(message, signature, public)
+
 *Output type of verify is boolean value: True if signature is authentic and False is something is wrong*
+
 
 To encrypt a message:
 
+
 message = *Your message*
+
 cipher = encrypt(message, public)
 
+
 To decrypt:
+
 
 print(decrypt(cipher, public[1], private))
 
