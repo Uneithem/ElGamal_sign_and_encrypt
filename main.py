@@ -1,4 +1,4 @@
-# this program uses syspy module for primitive roots search. For documentation please check https://docs.sympy.org/latest/modules/ntheory.html
+# this program uses sympy module for primitive roots search. For documentation please check https://docs.sympy.org/latest/modules/ntheory.html
 from math import gcd
 import random
 import hashlib
